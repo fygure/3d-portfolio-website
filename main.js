@@ -24,7 +24,7 @@ renderer.render(scene, camera);
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
 //changed to mesh standard material
-const material = new THREE.MeshBasicMaterial( {color: 0xFF6347, wireframe: true } );
+const material = new THREE.MeshStandardMaterial( {color: 0xFF6347, wireframe: true } );
 //geometry + material = mesh
 const torus = new THREE.Mesh( geometry, material );
 

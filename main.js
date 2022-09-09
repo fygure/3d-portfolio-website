@@ -67,7 +67,8 @@ function addStar() {
   scene.add(star)
 
 }
-
+//Creates array of 200 and fills with stars
+Array(200).fill().forEach(addStar)
 
 
 

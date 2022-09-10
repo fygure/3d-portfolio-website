@@ -84,7 +84,6 @@ const mongoose = require('mongoose')
 const app = express()
 
 // middleware
-
 app.use(express.json())
 
 app.use((req, res, next) => {
@@ -92,7 +91,7 @@ app.use((req, res, next) => {
     next()
 })
 
-// routes
+// routes (create a folder for this in backend)
 //example: app.use('/api/workouts', workoutRoutes)
 
 // connect to database

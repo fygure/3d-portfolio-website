@@ -14,10 +14,16 @@ require('dotenv').config()
 //3. create express object
 const express = require('express')
 
-
 //4. start up express app
 const app = express()
 
+//middleware
+//'next' MUST be invoked to move onto the next lines
+//13. log requests in console - (path and method)
+app.use((req, res, next) => {
+    console.log(req.path, req.method)
+    next()
+})
 
 //5. listen to port for requests
 app.listen(process.env.PORT, () => {
@@ -61,3 +67,5 @@ app.get('/', (request, response) => {
 //now we need to create the other type of requests
 //use insomnia or postman to test the routes
 
+//12. register some middleware - any code that executes between us getting request on server and sending a response
+// go to line 20 and create global variable that will fire for every request that comes in : app.use() 

@@ -79,6 +79,9 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 //example: const workoutRoute = require('./routes/workouts')
+const reviewRoutes = require('./routes/reviews_routes')
+
+
 
 // express app
 const app = express()
@@ -91,8 +94,10 @@ app.use((req, res, next) => {
     next()
 })
 
-// routes (create a folder for this in backend)
+// ROUTES (create a folder for this in backend)
 //example: app.use('/api/workouts', workoutRoutes)
+app.use('/api/reviews/', reviewRoutes)
+// localhost:4000/api/reviews - for insomnia
 
 // connect to database
 mongoose.connect(process.env.MONGO_URI)

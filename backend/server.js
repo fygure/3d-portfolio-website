@@ -1,3 +1,5 @@
+//NOTES AND INSTRUCTIONS
+
 // require('dotenv').config()
 //entry file for backend application
 //register express app

@@ -21,6 +21,7 @@ const reviewSchema = new Schema({
 
 
 // 3. create model based on schema
+// applies the schema to a model
 // used to import in other files later
 // example: Review.find() 
 // example: Review.add()
